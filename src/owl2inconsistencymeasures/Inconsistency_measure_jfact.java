@@ -47,7 +47,7 @@ public class Inconsistency_measure_jfact {
 	public static void main(String[] args) throws Exception {
 
 		try {
-			File inputOntologyFile = new File("examples/knowledgebaseK1.owl");
+			File inputOntologyFile = new File("data/WebOnt-description-logic-110.owl");
 
 			OWLReasonerFactory rf = new JFactFactory(); // for jfact
 
@@ -149,7 +149,7 @@ public class Inconsistency_measure_jfact {
 			MIVd.MIVd_measure(MIKAxiomSet, ontologyAxiomSet);
 			MIVsharp.MIVsharp_measure(arrayOfExplanationSet, ontologyAxiomSet);
 			MIVc.MIVc_measure(arrayOfExplanationSet, ontologyAxiomSet);
-			MIVshapley.MIVshapley_measure(df, ontologyAxiomSet);
+			MIshapley.MIshapley_measure(df, ontologyAxiomSet);
 			Scoring.Is_measure(explanations, ontologyAxiomSet);
 
 			System.out.println("***************************************************************");

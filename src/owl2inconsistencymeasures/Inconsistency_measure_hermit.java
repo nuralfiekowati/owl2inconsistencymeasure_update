@@ -49,7 +49,7 @@ public class Inconsistency_measure_hermit {
 	public static void main(String[] args) throws Exception {
 
 		try {
-			File inputOntologyFile = new File("examples/knowledgebaseK3.owl");
+			File inputOntologyFile = new File("examples/knowledgebaseK4.owl");
 
 			ReasonerFactory rf = new ReasonerFactory(); // for hermit
 
@@ -152,7 +152,7 @@ public class Inconsistency_measure_hermit {
 			MIVd.MIVd_measure(MIKAxiomSet, ontologyAxiomSet);
 			MIVsharp.MIVsharp_measure(arrayOfExplanationSet, ontologyAxiomSet);
 			MIVc.MIVc_measure(arrayOfExplanationSet, ontologyAxiomSet);
-			MIVshapley.MIVshapley_measure(df, ontologyAxiomSet);
+			MIshapley.MIshapley_measure(df, ontologyAxiomSet);
 			Scoring.Is_measure(explanations, ontologyAxiomSet);
 
 			System.out.println("***************************************************************");

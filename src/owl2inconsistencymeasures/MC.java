@@ -86,21 +86,16 @@ class MC {
 			System.out.println("Size of consistent subset size: " + consistentSubsetSize.size());
 			
 			if (explanations.size() > 0) {
-				System.out.println("111111111");
 				for (Set<OWLAxiom> inconsistent : inconsistentSubset) {
-					System.out.println("22222222222");
 					for (Set<OWLAxiom> consistent : consistentSubset) {
-						System.out.println("3333333333333333");
 						if ((inconsistent.containsAll(consistent) == true)
 								&& (inconsistent.equals(consistent) == false)) {
-							System.out.println("xxxxxxxxxxxxxxxfdfasjdkjf");
 							MCKcandidate.add(consistent);
 						}
 					}
 				}
 
 			} else {
-				System.out.println("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyy");
 				MCKcandidate.add(ontologyAxiomSet);
 			}
 
